@@ -9,11 +9,10 @@ lista_salario_bruto = [
     3500.00,
     4375.00,
     4375.00,
-    4520.25,
+    4810.75,
     5031.25,
     5031.25,
-    5031.25,
-    5534.38
+    5031.25
 ]
 
 tabela_holerite = criador_holerite(lista_salario_bruto)
