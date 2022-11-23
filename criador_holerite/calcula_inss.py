@@ -30,6 +30,7 @@ def calculo_inss(salario_bruto: float):
 
         elif salario_bruto > inss_fim_quarta_faixa:
             quarta_faixa = True
+            aliquota_faixa_inss = inss_aliquota_quarta_faixa
             desconto_faixa = inss_desconto_primeira_faixa + inss_desconto_segunda_faixa + \
                 inss_desconto_terceira_faixa + inss_desconto_quarta_faixa
 

@@ -3,16 +3,18 @@ from tabulate import tabulate
 import re
 
 lista_salario_bruto = [
-    2450.00,
+    900.00,
+    1200.00,
+    2400.00,
     3500.00,
-    3500.00,
-    3500.00,
-    4375.00,
-    4375.00,
-    4810.75,
-    5031.25,
-    5031.25,
-    5031.25
+    3900.00,
+    4300.00,
+    4500.00,
+    5300.00,
+    6900.00,
+    7800.00,
+    9500.00,
+    16700.00
 ]
 
 tabela_holerite = criador_holerite(lista_salario_bruto)

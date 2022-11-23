@@ -29,6 +29,8 @@ def calculo_irrf(aliquota_efetiva_inss, contribuicao_inss, salario_bruto):
     if primeira_faixa:
         base_calculo_irrf = 0
         desconto_irrf = 0
+        aliquota_faixa_irrf = 0
+        aliquota_efetiva_irrf = 0
     else:
         desconto_irrf = (base_calculo_irrf *
                          aliquota_faixa_irrf) - desconto_faixa
