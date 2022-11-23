@@ -19,6 +19,7 @@ lista_referencia = [
 
 lista_bruto = []
 lista_liquido = []
+lista_desconto_total = []
 lista_aliquota_faixa_inss = []
 lista_aliquota_efetiva_inss = []
 lista_aliquota_faixa_irrf = []
@@ -40,7 +41,8 @@ def criador_holerite(lista_salario_bruto: list):
 
         aliquota_faixa_inss = aliquota_faixa_inss * 100
         aliquota_faixa_irrf = aliquota_faixa_irrf * 100
-        salario_liquido = salario_bruto - (contribuicao_inss + desconto_irrf)
+        desconto_total = contribuicao_inss + desconto_irrf
+        salario_liquido = salario_bruto - desconto_total
 
         lista_bruto.append(f"R$ {salario_bruto:.2f}")
         lista_liquido.append(f"R$ {salario_liquido:.2f}")
@@ -51,6 +53,7 @@ def criador_holerite(lista_salario_bruto: list):
         lista_contribuicao_inss.append(f"R$ {contribuicao_inss:.2f}")
         lista_base_calculo_irrf.append(f"R$ {base_calculo_irrf:.2f}")
         lista_desconto_irrf.append(f"R$ {desconto_irrf:.2f}")
+        lista_desconto_total.append(f"R$ {desconto_total:.2f}")
 
     tabela_holerite = {
         "MES REF": lista_referencia,
@@ -62,6 +65,7 @@ def criador_holerite(lista_salario_bruto: list):
         "DESC IRRF": lista_desconto_irrf,
         "ALIQ IRRF": lista_aliquota_faixa_irrf,
         "EFET IRRF": lista_aliquota_efetiva_irrf,
+        "DESC TOTAL": lista_desconto_total,
         "SAL LIQUIDO": lista_liquido,
     }
 
