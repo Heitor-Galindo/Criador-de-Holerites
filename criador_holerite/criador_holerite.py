@@ -44,29 +44,29 @@ def criador_holerite(lista_salario_bruto: list):
         desconto_total = contribuicao_inss + desconto_irrf
         salario_liquido = salario_bruto - desconto_total
 
-        lista_bruto.append(f"R$ {salario_bruto:.2f}")
-        lista_liquido.append(f"R$ {salario_liquido:.2f}")
-        lista_aliquota_faixa_inss.append(f"{aliquota_faixa_inss:.2f}%")
-        lista_aliquota_efetiva_inss.append(f"{aliquota_efetiva_inss:.2f}%")
-        lista_aliquota_faixa_irrf.append(f"{aliquota_faixa_irrf:.2f}%")
-        lista_aliquota_efetiva_irrf.append(f"{aliquota_efetiva_irrf:.2f}%")
-        lista_contribuicao_inss.append(f"R$ {contribuicao_inss:.2f}")
-        lista_base_calculo_irrf.append(f"R$ {base_calculo_irrf:.2f}")
-        lista_desconto_irrf.append(f"R$ {desconto_irrf:.2f}")
-        lista_desconto_total.append(f"R$ {desconto_total:.2f}")
+        lista_bruto.append(salario_bruto)
+        lista_liquido.append(salario_liquido)
+        lista_aliquota_faixa_inss.append(aliquota_faixa_inss)
+        lista_aliquota_efetiva_inss.append(aliquota_efetiva_inss)
+        lista_aliquota_faixa_irrf.append(aliquota_faixa_irrf)
+        lista_aliquota_efetiva_irrf.append(aliquota_efetiva_irrf)
+        lista_contribuicao_inss.append(contribuicao_inss)
+        lista_base_calculo_irrf.append(base_calculo_irrf)
+        lista_desconto_irrf.append(desconto_irrf)
+        lista_desconto_total.append(desconto_total)
 
     tabela_holerite = {
         "MES REF": lista_referencia,
-        "SAL BRUTO": lista_bruto,
-        "ALIQ INSS": lista_aliquota_faixa_inss,
-        "EFET INSS": lista_aliquota_efetiva_inss,
-        "DESC INSS": lista_contribuicao_inss,
-        "BASE IRRF": lista_base_calculo_irrf,
-        "DESC IRRF": lista_desconto_irrf,
-        "ALIQ IRRF": lista_aliquota_faixa_irrf,
-        "EFET IRRF": lista_aliquota_efetiva_irrf,
-        "DESC TOTAL": lista_desconto_total,
-        "SAL LIQUIDO": lista_liquido,
+        "SAL BRUTO (R$)": lista_bruto,
+        "BASE IRRF (R$)": lista_base_calculo_irrf,
+        "DESC NSS (R$)": lista_contribuicao_inss,
+        "DESC IRRF (R$)": lista_desconto_irrf,
+        "DESC TOTAL (R$)": lista_desconto_total,
+        "SAL LIQUIDO (R$)": lista_liquido,
+        "ALIQ INSS (%)": lista_aliquota_faixa_inss,
+        "ALIQ IRRF (%)": lista_aliquota_faixa_irrf,
+        "EFET INSS (%)": lista_aliquota_efetiva_inss,
+        "EFET IRRF (%)": lista_aliquota_efetiva_irrf,
     }
 
     return tabela_holerite
